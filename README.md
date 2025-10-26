@@ -29,6 +29,13 @@ The future of defense isn’t just secure—it’s **provable**.
 
 ---
 
+## Current Release
+**Version:** 0.1.0  
+**Mode:** Sandbox (Local Prototype)  
+**Status:** ✅ Functional CLI + Config-based packet filtering  
+
+---
+
 ## Roadmap
 
 | Phase | Objective | Status |
