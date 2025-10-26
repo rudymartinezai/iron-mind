@@ -49,55 +49,6 @@ A minimal, local Rust firewall simulation that can:
 ### Description
 A production-level architecture ready for blockchain integration (Substrate, Tendermint, or custom). Actual blockchain code is **NOT** implemented, but placeholder modules are prepared.
 
-### TODO for Codex
-- [ ] Create `prod/Cargo.toml` with expanded dependencies:
-  ```toml
-  [package]
-  name = "iron_mind"
-  version = "0.1.0"
-  edition = "2021"
-
-  [dependencies]
-  clap = { version = "4.4", features = ["derive"] }
-  tokio = { version = "1", features = ["full"] }
-  serde = { version = "1.0", features = ["derive"] }
-  toml = "0.8"
-  log = "0.4"
-  env_logger = "0.10"
-  # Placeholder blockchain crates (to be filled later)
-  # substrate-api-client = "..."  
-  ```
-
-- [ ] Implement `prod/src/main.rs`:
-  ```rust
-  mod firewall_core;
-  mod blockchain_logger;
-  mod policy_manager;
-  mod telemetry;
-
-  #[tokio::main]
-  async fn main() {
-      env_logger::init();
-      log::info!("Iron Mind Production starting...");
-
-      firewall_core::init().await;
-      policy_manager::sync_policies().await;
-      telemetry::start().await;
-  }
-  ```
-
-- [ ] Create stub modules with TODO markers like:
-  ```rust
-  // TODO: Implement blockchain-backed event logging
-  pub async fn log_event(event: &str) {
-      println!("Blockchain placeholder: {}", event);
-  }
-  ```
-
-- [ ] Create placeholder structs for rule validation and ledger syncing.
-
----
-
 ## 🧰 macOS Setup Instructions
 
 1. Install Rust:
